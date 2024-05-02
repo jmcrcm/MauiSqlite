@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSqlite.MainPage">
+
+    <Grid
+        RowDefinitions="10, Auto, *, Auto, 10"
+        ColumnDefinitions="10, Auto, *, Auto, 10">
+        <Label
+            Grid.Row="2"
+            Grid.Column="2"
+            Text="Aloha World!"/>
+    </Grid>
+
+</ContentPage>
