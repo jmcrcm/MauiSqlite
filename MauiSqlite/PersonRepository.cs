@@ -7,17 +7,17 @@ namespace MauiSqlite
     {
         public string StatusMessage { get; set; }
         string _dbPath;
-        private SQLiteConnection conn;
+        private SQLiteAsyncConnection conn;
 
-        private void Init()
+        private async Task Init()
         {
             if (conn != null)
             {
                 return;
             }
 
-            conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<Person>();
+            conn = new SQLiteAsyncConnection(_dbPath);
+            await conn.CreateTableAsync<Person>();
         }
 
         public PersonRepository(string dbPath)
@@ -25,21 +25,20 @@ namespace MauiSqlite
             _dbPath = dbPath;
         }
 
-        public void AddNewPerson(string name)
+        public async Task AddNewPerson(string name)
         {
             int result = 0;
             try
             {
-                Init();
+                await Init();
 
                 if (string.IsNullOrEmpty(name))
                 {
                     throw new Exception("Valid name required");
                 }
 
-                result = conn.Insert(new Person { Name = name });
+                result = await conn.InsertAsync(new Person { Name = name });
 
-                //result = 0;
                 StatusMessage = string.Format("{0} records(s) added (Name: {1})", result, name);
             }
             catch(Exception ex)
@@ -48,12 +47,12 @@ namespace MauiSqlite
             }
         }
 
-        public List<Person> GetAllPeople()
+        public async Task<List<Person>> GetAllPeople()
         {
             try
             {
-                Init();
-                return conn.Table<Person>().ToList();
+                await Init();
+                return await conn.Table<Person>().ToListAsync();
             }
             catch (Exception ex)
             {
