@@ -25,5 +25,10 @@ namespace MauiSqlite
             List<Person> people = await App.PersonRepo.GetAllPeople();
             peopleList.ItemsSource = people;
         }
+
+        public async void GoToWeatherClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("WeatherPage");
+        }
     }
 }

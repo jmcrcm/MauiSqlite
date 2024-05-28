@@ -18,7 +18,7 @@ namespace MauiSqlite
             var window = base.CreateWindow(activationState);
 
             const int newWidth = 400;
-            const int newHeight = 400;
+            const int newHeight = 600;
 
             window.Width = newWidth;
             window.Height = newHeight;
