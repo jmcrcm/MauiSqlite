@@ -9,6 +9,7 @@ namespace MauiSqlite
             InitializeComponent();
             Routing.RegisterRoute("MainPage", typeof(MainPage));
             Routing.RegisterRoute("WeatherPage", typeof(WeatherPage));
+            Routing.RegisterRoute("RestClientPage", typeof(RestClientPage));
         }
     }
 }

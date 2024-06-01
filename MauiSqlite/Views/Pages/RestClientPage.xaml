@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSqlite.Views.Pages.RestClientPage"
+             Title="Rest Client Page"
+             BackgroundColor="#bababa">
+    <Grid
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+        <Frame>
+            <Grid
+                ColumnSpacing="5"
+                ColumnDefinitions="*, *, *">
+                <Entry
+                    Placeholder="Latitude"
+                    Grid.Column="0"/>
+                <Entry
+                    Placeholder="Longitude"
+                    Grid.Column="1"/>
+                <Button
+                    Text="Fetch"
+                    Grid.Column="2"/>
+            </Grid>
+        </Frame>
+        <Image
+            Grid.Row="1"
+            WidthRequest="100" 
+            HeightRequest="100"/>
+        <Label
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            FontSize="70"
+            TextColor="White"
+            Text="0°C"/>
+        <Label
+            Grid.Row="3"
+            HorizontalOptions="Center"
+            FontSize="25"
+            FontAttributes="Bold"
+            TextColor="White"
+            Text="Raining"/>
+        <Label
+            Grid.Row="4"
+            HorizontalOptions="Center"
+            FontSize="15"
+            FontAttributes="Bold"
+            TextColor="White"
+            Text="New York, USA"/>
+    </Grid>
+</ContentPage>

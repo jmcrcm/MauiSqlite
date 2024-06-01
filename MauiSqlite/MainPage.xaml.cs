@@ -30,5 +30,10 @@ namespace MauiSqlite
         {
             await Shell.Current.GoToAsync("WeatherPage");
         }
+
+        public async void GoToRestApiClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("RestClientPage");
+        }
     }
 }

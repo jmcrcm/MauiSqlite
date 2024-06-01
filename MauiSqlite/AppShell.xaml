@@ -16,5 +16,9 @@
         Title="Weather"
         ContentTemplate="{DataTemplate pages:WeatherPage}"
         Route="Weather"/>
+    <ShellContent
+        Title="RestClient"
+        ContentTemplate="{DataTemplate pages:RestClientPage}"
+        Route="RestClient"/>
 
 </Shell>

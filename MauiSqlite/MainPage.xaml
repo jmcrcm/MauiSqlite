@@ -60,6 +60,12 @@
             Grid.Column="2"
             Clicked="GoToWeatherClicked"/>
 
+        <Button
+            Text="Rest API"
+            Grid.Row="7"
+            Grid.Column="2"
+            Clicked="GoToRestApiClicked"/>
+
 
     </Grid>
 
